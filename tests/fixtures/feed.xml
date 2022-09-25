@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>News, Politics, Opinion, Commentary, and Analysis</title>
+        <description>In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.</description>
+        <link>https://www.newyorker.com/news</link>
+        <atom:link href="https://www.newyorker.com/feed/news/rss" rel="self" type="application/atom+xml"/>
+        <copyright>© Condé Nast 2022</copyright>
+        <language>en-US</language>
+        <lastBuildDate>Thu, 22 Sep 2022 18:55:12 +0000</lastBuildDate>
+        <item>
+            <title>Why Is Trump Openly Embracing QAnon Now?</title>
+            <link>https://www.newyorker.com/news/our-columnists/why-is-trump-openly-embracing-qanon-now</link>
+            <guid isPermaLink="false">6329b811882c6ff52b2d3660</guid>
+            <pubDate>Tue, 20 Sep 2022 16:54:48 +0000</pubDate>
+            <media:content/>
+            <description>The former President is likely signalling to prosecutors that he won’t go quietly, so they had better beware.</description>
+            <category>News / Our Columnists</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Donald Trump, QAnon, Merrick Garland, Conspiracy Theories, Politics, Investigations</media:keywords>
+            <dc:creator>John Cassidy</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6329dedaf3c36e56980f8a87/master/pass/cassidy-qanon-trump.jpg" width="2250" height="1500"/>
+        </item>
+        <item>
+            <title>Behind the Campaign to Put Election Deniers in Charge of Elections</title>
+            <link>https://www.newyorker.com/news/daily-comment/behind-the-campaign-to-put-election-deniers-in-charge-of-elections</link>
+            <guid isPermaLink="false">630e4639a4d85326e2f73a27</guid>
+            <pubDate>Tue, 20 Sep 2022 19:20:14 +0000</pubDate>
+            <media:content/>
+            <description>The states’ secretaries of state are supposed to insure election integrity, but a far-right coalition seeks to transform that office.</description>
+            <category>News / Daily Comment</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>2022 Midterm Elections, Secretary of State, Conservatives, Election Fraud, Donald Trump</media:keywords>
+            <dc:creator>Sue Halpern</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/630e6756ce52864c0534f273/master/pass/Halpern-Secr-estate.jpg" width="2560" height="1707"/>
+        </item>
+        <item>
+            <title>The Queen’s Death and Competing Narratives of Empire</title>
+            <link>https://www.newyorker.com/news/q-and-a/the-queens-death-and-competing-narratives-of-empire</link>
+            <guid isPermaLink="false">6328e2b0c68d177450f7e370</guid>
+            <pubDate>Wed, 21 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>Does the U.K. focus too much on its imperial past, or not enough?</description>
+            <category>News / Q. &amp; A.</category>
+            <media:keywords>United Kingdom, Queen Elizabeth II, British Empire, Monarchy, Imperialism, Royal Family</media:keywords>
+            <dc:creator>Isaac Chotiner</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6329e91ef3c36e56980f8a8d/master/pass/Chotiner-Commonwealth-Queen.jpg" width="2560" height="1745"/>
+        </item>
+        <item>
+            <title>Why Ron DeSantis Thinks Weaponizing Asylum Seekers Is a Winning Strategy</title>
+            <link>https://www.newyorker.com/news/our-columnists/why-ron-desantis-thinks-weaponizing-asylum-seekers-is-a-winning-strategy</link>
+            <guid isPermaLink="false">6329c7c519c5299469f57c66</guid>
+            <pubDate>Thu, 22 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>The Florida Governor’s political stunt rests on the cynical assumption that no one actually wants to offer refuge to people fleeing adversity.</description>
+            <category>News / Our Columnists</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Ron DeSantis, Greg Abbott, Refugees, Asylum Seekers, Immigration, Send notifications on next schedule</media:keywords>
+            <dc:creator>Masha Gessen</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/632b6af40c59aaa58755a0fa/master/pass/gessen-refugees.jpg" width="2221" height="1500"/>
+        </item>
+        <item>
+            <title>Putin Expands His War as Biden Tries to Rally the U.N.</title>
+            <link>https://www.newyorker.com/news/daily-comment/putin-expands-his-war-as-biden-tries-to-rally-the-un</link>
+            <guid isPermaLink="false">632b1f86b1854f1d3eb5b1a3</guid>
+            <pubDate>Thu, 22 Sep 2022 00:14:06 +0000</pubDate>
+            <media:content/>
+            <description>The world body has proved weak and dysfunctional in solving existential crises.</description>
+            <category>News / Daily Comment</category>
+            <category>News / More on Ukraine</category>
+            <media:keywords>United Nations General Assembly, Russia, Ukraine, Vladimir Putin</media:keywords>
+            <dc:creator>Robin Wright</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/632b8f410c59aaa58755a0fe/master/pass/Wright-Biden-UN.jpg" width="2560" height="1707"/>
+        </item>
+        <item>
+            <title>Watching Trump Embrace QAnon from the Historical Jewish Quarter of Kraków</title>
+            <link>https://www.newyorker.com/news/daily-comment/watching-trump-embrace-qanon-from-the-historical-jewish-quarter-of-krakow</link>
+            <guid isPermaLink="false">6329ec461dc08bd0ff3e31d5</guid>
+            <pubDate>Wed, 21 Sep 2022 20:17:05 +0000</pubDate>
+            <media:content/>
+            <description>Centers hold, until they don’t.</description>
+            <category>News / Daily Comment</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Donald Trump, Ohio, Fascism, QAnon, The Holocaust, Poland</media:keywords>
+            <dc:creator>Bill McKibben</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/632a06135fae41ed922fc420/master/pass/McKibben%20-%20Trump%20Rally%20in%20Youngstown%20Final.jpg" width="2560" height="1336"/>
+        </item>
+        <item>
+            <title>The Crowds at the Queen’s Funeral</title>
+            <link>https://www.newyorker.com/news/letter-from-the-uk/the-crowds-at-the-queens-funeral</link>
+            <guid isPermaLink="false">6322237b4e18ec083d4415d0</guid>
+            <pubDate>Mon, 19 Sep 2022 21:47:23 +0000</pubDate>
+            <media:content/>
+            <description>On Monday morning, Hyde Park was like a sombre festival ground as masses gathered to pay their final respects.</description>
+            <category>News / Letter from the U.K.</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Queen Elizabeth II, Funerals, London, Royal Family, Crowds</media:keywords>
+            <dc:creator>Anna Russell</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6328c083e8f49d9bc52fb2e9/master/pass/russell-coggin-queen-01.jpg" width="1500" height="1987"/>
+        </item>
+        <item>
+            <title>The Legal Fight for Democracy</title>
+            <link>https://www.newyorker.com/podcast/politics-and-more/the-legal-fight-for-democracy</link>
+            <guid isPermaLink="false">6328b5c61dc08bd0ff3e3010</guid>
+            <pubDate>Mon, 19 Sep 2022 21:00:00 +0000</pubDate>
+            <media:content/>
+            <description>The attorney Marc Elias is working on two critical Supreme Court cases challenging voter suppression. He talks with The New Yorker’s Sue Halpern about the battle ahead.</description>
+            <category>Podcast / Politics and More Podcast</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Podcasts, Voter Suppression, Supreme Court, Democracy</media:keywords>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6328c2a539ac97c4c23ff83e/master/pass/Politics-more-Marc.jpg" width="2560" height="1707"/>
+        </item>
+        <item>
+            <title>From Boy to Bono</title>
+            <link>https://www.newyorker.com/magazine/2022/09/26/from-boy-to-bono</link>
+            <guid isPermaLink="false">6320acbed6980723cf9cdaa3</guid>
+            <pubDate>Mon, 19 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>I was born with melodies in my head, and I was looking for a way to hear them in the world.</description>
+            <category>Magazine / Personal History</category>
+            <category>News / New Yorker Favorites</category>
+            <dc:creator>Bono</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/632250e84e18ec083d4415da/master/pass/220926_r41051.jpg" width="2560" height="1619"/>
+        </item>
+        <item>
+            <title>Shane Gillis’s Fall and Rise</title>
+            <link>https://www.newyorker.com/magazine/2022/09/26/shane-gillis-fall-and-rise</link>
+            <guid isPermaLink="false">6320acc458fb3f47402aff0d</guid>
+            <pubDate>Mon, 19 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>For a provocative comic, losing the job of a lifetime was the beginning of a second act.</description>
+            <category>Magazine / Annals of Comedy</category>
+            <category>News / New Yorker Favorites</category>
+            <dc:creator>Kelefa Sanneh</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6323a40e882c6ff52b2d3089/master/pass/220926_r41049web-site.jpg" width="1000" height="750"/>
+        </item>
+        <item>
+            <title>Laila Gohar’s Exquisite Taste</title>
+            <link>https://www.newyorker.com/magazine/2022/09/26/laila-gohars-exquisite-taste</link>
+            <guid isPermaLink="false">6320acd758fb3f47402aff0f</guid>
+            <pubDate>Mon, 19 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>How uncanny instincts turned a style maverick into the Björk of food.</description>
+            <category>Magazine / The World of Fashion</category>
+            <category>News / New Yorker Favorites</category>
+            <dc:creator>Molly Fischer</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/63235eed86debd54e2013660/master/pass/220926_r41074.jpg" width="1902" height="2560"/>
+        </item>
+        <item>
+            <title>The Case of the Disputed Lucian Freud</title>
+            <link>https://www.newyorker.com/magazine/2022/09/26/the-case-of-the-disputed-lucian-freud</link>
+            <guid isPermaLink="false">6320ace09f86a85a3001ecdf</guid>
+            <pubDate>Mon, 19 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>A collector thought he had bought a painting by the celebrated British artist. How far would he go to prove it?</description>
+            <category>Magazine / Onward and Upward with the Arts</category>
+            <category>News / New Yorker Favorites</category>
+            <dc:creator>Sam Knight</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6323a2074e18ec083d441873/master/pass/220926_r41053.jpg" width="2075" height="2560"/>
+        </item>
+        <item>
+            <title>Two Friends’ Mutual-Aid Movement in “The Barrio Fridge”</title>
+            <link>https://www.newyorker.com/video/watch/the-barrio-fridge</link>
+            <guid isPermaLink="false">6323312bb1854f1d3eb5a620</guid>
+            <pubDate>Fri, 16 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>In Nikki Dodd’s documentary short, a full-time student and a furloughed event planner team up to combat food insecurity in East Harlem.</description>
+            <category>Culture</category>
+            <dc:publisher>Condé Nast</dc:publisher>
+        </item>
+        <item>
+            <title>“Stranger at the Gate”: A Veteran’s Return from the Brink of Terrorism</title>
+            <link>https://www.newyorker.com/video/watch/stranger-at-the-gate</link>
+            <guid isPermaLink="false">63208d2f70f542010fc2bdba</guid>
+            <pubDate>Wed, 14 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>In Joshua Seftel’s documentary, a community recollects how a would-be terrorist made—and then abandoned—a violent plan.</description>
+            <category>Culture</category>
+            <dc:publisher>Condé Nast</dc:publisher>
+        </item>
+        <item>
+            <title>In “The Box,” Survivors of Solitary Confinement Tell Their Stories</title>
+            <link>https://www.newyorker.com/video/watch/the-new-yorker-documentary-the-box-minds-lost-in-solitary-confinement</link>
+            <guid isPermaLink="false">6317b1ab0248742c2a0fd2b6</guid>
+            <pubDate>Wed, 07 Sep 2022 10:00:00 +0000</pubDate>
+            <media:content/>
+            <description>James Burns and Shal Ngo’s documentary short offers a window into the harsh reality of the practice—and the long-term scars that it leaves.</description>
+            <category>Culture</category>
+            <dc:publisher>Condé Nast</dc:publisher>
+        </item>
+        <item>
+            <title>Can King Charles III Capture the Queen’s Popularity?</title>
+            <link>https://www.newyorker.com/podcast/politics-and-more/can-king-charles-iii-capture-the-queens-popularity</link>
+            <guid isPermaLink="false">63236d32795134076d2a2072</guid>
+            <pubDate>Thu, 15 Sep 2022 23:23:15 +0000</pubDate>
+            <media:content/>
+            <description>The passing of the beloved Queen Elizabeth II raises serious questions about the future of the Royal Family.</description>
+            <category>Podcast / Politics and More Podcast</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Podcasts, Royal Family, Queen Elizabeth II, Charles III</media:keywords>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/632386e0b1854f1d3eb5a727/master/pass/podcast-charles.jpg" width="1851" height="1500"/>
+        </item>
+    </channel>
+</rss>

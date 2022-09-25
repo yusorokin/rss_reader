@@ -1,0 +1,25 @@
+{
+    "feed": "News, Politics, Opinion, Commentary, and Analysis",
+    "url": "http://www.example.com",
+    "items": [
+        {
+            "title": "Why Is Trump Openly Embracing QAnon Now?",
+            "date": "Tue, 20 Sep 2022 16:54:48 +0600",
+            "link": "https://www.newyorker.com/news/our-columnists/why-is-trump-openly-embracing-qanon-now",
+            "summary": "[Image 2: Why Is Trump Openly Embracing QAnon Now?][2]\nThe former President is likely signalling to prosecutors that he won’t go quietly, so they had better beware.",
+            "article_content": "",
+            "links": [
+                {
+                    "id": 1,
+                    "src": "https://www.newyorker.com/news/our-columnists/why-is-trump-openly-embracing-qanon-now",
+                    "type": "link"
+                },
+                {
+                    "id": 2,
+                    "src": "https://media.newyorker.com/photos/6329dedaf3c36e56980f8a87/master/pass/cassidy-qanon-trump.jpg",
+                    "type": "image"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom_invalid="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>News, Politics, Opinion, Commentary, and Analysis</title>
+        <description>In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.</description>
+        <link>https://www.newyorker.com/news</link>
+        <atom:link href="https://www.newyorker.com/feed/news/rss" rel="self" type="application/atom+xml"/>
+        <copyright>© Condé Nast 2022</copyright>
+        <language>en-US</language>
+        <lastBuildDate>Thu, 22 Sep 2022 18:55:12 +0000</lastBuildDate>
+        <item>
+            <title>Why Is Trump Openly Embracing QAnon Now?</title>
+            <link>https://www.newyorker.com/news/our-columnists/why-is-trump-openly-embracing-qanon-now</link>
+            <guid isPermaLink="false">6329b811882c6ff52b2d3660</guid>
+            <pubDate>Tue, 20 Sep 2022 16:54:48 +0000</pubDate>
+            <media:content/>
+            <description>The former President is likely signalling to prosecutors that he won’t go quietly, so they had better beware.</description>
+            <category>News / Our Columnists</category>
+            <category>News / New Yorker Favorites</category>
+            <media:keywords>Donald Trump, QAnon, Merrick Garland, Conspiracy Theories, Politics, Investigations</media:keywords>
+            <dc:creator>John Cassidy</dc:creator>
+            <dc:publisher>Condé Nast</dc:publisher>
+            <media:thumbnail url="https://media.newyorker.com/photos/6329dedaf3c36e56980f8a87/master/pass/cassidy-qanon-trump.jpg" width="2250" height="1500"/>
+        </item>
+    </channel>
+</rss>
