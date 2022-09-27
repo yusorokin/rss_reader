@@ -1,5 +1,6 @@
 from hashlib import new
 import json
+import tempfile
 import unittest
 from io import StringIO
 from unittest.mock import patch, Mock
@@ -9,6 +10,12 @@ from rss_reader import one_shot
 import feedparser
 from tests.fixtures import article_parser
 from tests.fixtures import parsed_feed
+from tinydb import TinyDB
+import platform
+import tempfile
+
+tempdir = "/tmp" if platform.system() == "Darwin" else tempfile.gettempdir()
+db_path = os.path.join(tempdir, "test_cache.json")
 
 def handle_exceptions_with(excepthook, target, /, *args, **kwargs):
     try:
@@ -156,6 +163,11 @@ class TestReadRss(unittest.TestCase):
         with open("tests/fixtures/invalid_feed.xml", "r") as file:
             self.parsed_invalid_feed = feedparser.parse(file.read())
 
+    def tearDown(self):
+        with TinyDB(db_path) as db:
+            db.drop_tables()
+
+    @patch('rss_reader.one_shot.db_path', db_path)
     @patch("sys.stdout", new_callable=StringIO)
     @patch("rss_reader.one_shot.feedparser")
     def test_should_print_proper_result(self, mocked_parser, mocked_stdout):
@@ -163,9 +175,10 @@ class TestReadRss(unittest.TestCase):
         one_shot.read_rss('http://www.example.com', limit=1, to_json=True)
         result = json.loads(mocked_stdout.getvalue().strip())
 
-        self.assertDictEqual(result, self.expected_json)
-        self.assertEqual(len(result["items"]), 1)
+        self.assertDictEqual(result["feed"][0], self.expected_json)
+        self.assertEqual(len(result["feed"][0]["items"]), 1)
 
+    @patch('rss_reader.one_shot.db_path', db_path)
     @patch("rss_reader.one_shot.feedparser")
     def test_should_raise_on_invalid_xml(self, mocked_parser):
         mocked_parser.parse.return_value = self.parsed_invalid_feed

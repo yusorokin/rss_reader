@@ -12,7 +12,7 @@ class TestArgParser(unittest.TestCase):
             arg_parser.parse_args(args)
         self.assertRegexpMatches(
             mock_stderr.getvalue(),
-            r"the following arguments are required")
+            r"Mandatory positional argument 'URL' is missing")
 
     @patch('sys.stderr', new_callable=StringIO)
     def test_should_accept_only_one_positional_arg(self, mock_stderr):
