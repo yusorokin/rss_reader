@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rss_reader"
+version = "0.0.1"
+requires-python = ">=3.9"
+dependencies = [
+    'feedparser == 6.0.10',
+    'requests',
+    'dateparser',
+    'beautifulsoup4',
+    'html5lib == 1.1',
+]
+
+[project.scripts]
+rss_reader = "rss_reader.__main__:cli"
+
+[tool.setuptools.packages]
+find = {}
+
+# [tool.setuptools.packages.find]
+# # All the following settings are optional:
+# # where = ["rss_reader"]  # ["."] by default
+# include = ["rss_reader"]  # ["*"] by default
+# # exclude = ["mypackage.tests*"]  # empty by default
+# # namespaces = false  # true by default
+
+[tool.setuptools]
+py-modules = ["rss_reader"]
