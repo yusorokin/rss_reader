@@ -19,6 +19,10 @@ import logging
 from logging import StreamHandler, Formatter
 import sys
 import os
+from tinydb import TinyDB, Query
+import tempfile
+import platform
+
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -26,6 +30,8 @@ handler = StreamHandler(stream=sys.stdout)
 handler.setFormatter(Formatter(fmt='%(asctime)s [%(levelname)s] %(message)s'))
 logger.addHandler(handler)
 
+tempdir = "/tmp" if platform.system() == "Darwin" else tempfile.gettempdir()
+db_path = os.path.join(tempdir, "rss_reader_cache.json")
 
 class FeedparserFeedFormattingError(Exception):
     pass
@@ -34,6 +40,9 @@ class ElementAttributeNotFound(Exception):
     pass
 
 class ElementNotFound(Exception):
+    pass
+
+class CachedFeedtNotFound(Exception):
     pass
 
 
@@ -199,26 +208,18 @@ def print_result(parsed_rss):
         print()
         pass
 
-
-def read_rss(rss_url, limit=3, to_json=False, verbose=False):
+def parse_rss(rss_url, limit):
     """
     Reads and parses RSS.
 
     This function reads RSS feed by provided URL, parses it
-    and outputs in given format.
+    and caches the result
 
     Input parameters:
         rss_url - RSS feed URL to be read.
         limit - The amount of entries to be read from the feed.
-        to_json - JSON output flag. Prints JSON if 'True'.
-        verbose - Prints additional information if 'True'.
     """
-    if verbose:
-        logger.setLevel(logging.INFO)
-    else:
-        logger.setLevel(logging.ERROR)
-    logger.info("Start reading")
-
+    feed = {}
     rss_url_parsed = urlparse(rss_url)
     if rss_url_parsed.netloc + rss_url_parsed.path == "news.yahoo.com/rss/":
         parse_article_page = True
@@ -294,13 +295,75 @@ def read_rss(rss_url, limit=3, to_json=False, verbose=False):
             "links": links.copy()
         })
         logger.info(f"Entry {k + 1} end")
+    cache_feed(feed)
+
+def read_rss(rss_url=None, limit=3, to_json=False, verbose=False, date=None):
+    """
+    Initiates reading and parsing RSS.
+
+    This function reads RSS feed by provided URL, parses it,
+    saves in cache and outputs in given format.
+    Or searches parsed feed in cache if --date argument is provided
+
+    Input parameters:
+        rss_url - RSS feed URL to be read.
+        limit - The amount of entries to be read from the feed.
+        to_json - JSON output flag. Prints JSON if 'True'.
+        verbose - Prints additional information if 'True'.
+    """
+    if verbose:
+        logger.setLevel(logging.INFO)
+    else:
+        logger.setLevel(logging.ERROR)
+    logger.info("Start reading")
+
+    if date is None:
+        logger.info(f"Parsing RSS")
+        parse_rss(rss_url, limit)
+
+    feed = get_cached_feed(date, rss_url, limit)
 
     if to_json:
         logger.info(f"Printing JSON")
         print(json.dumps(feed, sort_keys=False, indent=4, ensure_ascii=False))
     else:
         logger.info(f"Printing formatted output")
-        print_result(feed)
+        for item in feed["feed"]:
+            print_result(item)
+
+def get_cached_feed(date, feed_url, limit):
+    if date is None:
+        date = time.strftime("%Y%m%d")
+    with TinyDB(db_path) as db:
+        if feed_url is None:
+            query = (Query().cache_date == date)
+        else:
+            query = ((Query().cache_date == date) &
+                (Query().feed_url == feed_url))
+
+        cached_feed = db.search(query)
+        feed_content = []
+        for item in cached_feed:
+                if len(item["feed_content"]["items"]) > limit:
+                    item["feed_content"]["items"] = item["feed_content"]["items"][:limit]
+                feed_content.append(item["feed_content"])
+        return {"date": date, "feed": feed_content}
+
+def cache_feed(data):
+    with TinyDB(db_path) as db:
+        date = time.strftime("%Y%m%d")
+        feed_cache_content = {
+                "cache_date": date,
+                "feed_url": data["url"],
+                "feed_content": data
+                }
+        if not db.contains((Query().cache_date == date) &
+                (Query().feed_url == data["url"])):
+            db.insert(feed_cache_content)
+        else:
+            db.update(feed_cache_content,
+                ((Query().cache_date == date) &
+                    (Query().feed_url == data["url"])))
 
 sys.excepthook = exception_handler
 
@@ -311,7 +374,7 @@ links = []
 if __name__ == "__main__":
     # read_rss('https://news.yahoo.com/rss/', limit=3, verbose=False)
     # read_rss('http://www.newyorker.com/feed/news', limit=3, to_json=True)
-    read_rss('http://www.newyorker.com/feed/news', limit=3)
+    read_rss('http://www.newyorker.com/feed/news', limit=1)
     # read_rss('http://ya.ru')
     # print(parse_article("https://news.yahoo.com/dark-brandon-strikes-again-joe-081130226.html"))
     # print(links)
