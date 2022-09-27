@@ -5,7 +5,7 @@ from io import StringIO
 from unittest.mock import patch, Mock
 import os
 import sys
-import one_shot
+from rss_reader import one_shot
 import feedparser
 from tests.fixtures import article_parser
 from tests.fixtures import parsed_feed
@@ -87,8 +87,8 @@ class TestGetImageAttrs(unittest.TestCase):
             one_shot.get_image_attrs(img_obj.img)
 
 class TestParseArticle(unittest.TestCase):
-    @patch('one_shot.links', [])
-    @patch('one_shot.get', Mock())
+    @patch('rss_reader.one_shot.links', [])
+    @patch('rss_reader.one_shot.get', Mock())
     def test_should_return_parsed_article(self):
         one_shot.get("www.example.com").content = article_parser.article_web_page
         parsed_article = one_shot.parse_article("www.example.com")
@@ -106,16 +106,16 @@ class TestParseArticle(unittest.TestCase):
         self.assertRegex(parsed_article, r"Some text here")
         self.assertRegex(parsed_article, r"Some more text here")
 
-    @patch('one_shot.links', [])
-    @patch('one_shot.get', Mock())
+    @patch('rss_reader.one_shot.links', [])
+    @patch('rss_reader.one_shot.get', Mock())
     def test_should_raise_on_missing_title(self):
         one_shot.get("www.example.com").content = article_parser.article_web_page_no_title
 
         with self.assertRaises(one_shot.ElementNotFound):
             parsed_article = one_shot.parse_article("www.example.com")
 
-    @patch('one_shot.links', [])
-    @patch('one_shot.get', Mock())
+    @patch('rss_reader.one_shot.links', [])
+    @patch('rss_reader.one_shot.get', Mock())
     def test_should_raise_on_missing_body(self):
         one_shot.get("www.example.com").content = article_parser.article_web_page_no_body
 
@@ -157,7 +157,7 @@ class TestReadRss(unittest.TestCase):
             self.parsed_invalid_feed = feedparser.parse(file.read())
 
     @patch("sys.stdout", new_callable=StringIO)
-    @patch("one_shot.feedparser")
+    @patch("rss_reader.one_shot.feedparser")
     def test_should_print_proper_result(self, mocked_parser, mocked_stdout):
         mocked_parser.parse.return_value = self.parsed_feed
         one_shot.read_rss('http://www.example.com', limit=1, to_json=True)
@@ -166,7 +166,7 @@ class TestReadRss(unittest.TestCase):
         self.assertDictEqual(result, self.expected_json)
         self.assertEqual(len(result["items"]), 1)
 
-    @patch("one_shot.feedparser")
+    @patch("rss_reader.one_shot.feedparser")
     def test_should_raise_on_invalid_xml(self, mocked_parser):
         mocked_parser.parse.return_value = self.parsed_invalid_feed
 

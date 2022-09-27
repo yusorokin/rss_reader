@@ -1,7 +1,7 @@
 import unittest
 from io import StringIO
 from unittest.mock import patch
-import arg_parser
+from rss_reader import arg_parser
 
 class TestArgParser(unittest.TestCase):
     @patch('sys.stderr', new_callable=StringIO)
@@ -54,7 +54,7 @@ class TestArgParser(unittest.TestCase):
         and show version.
         """
         args = ["--version"]
-        version_regex = r"^RSS reader (\d+\\.)?(\d+\\.)?(\\*|\d+).*$"
+        version_regex = r"^rss_reader (\d+\\.)?(\d+\\.)?(\\*|\d+).*$"
         with self.assertRaises(SystemExit):
             arg_parser.parse_args(args)
         self.assertRegexpMatches(
