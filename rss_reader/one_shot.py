@@ -19,7 +19,6 @@ import logging
 from logging import StreamHandler, Formatter
 import sys
 import os
-from unicodedata import normalize
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -301,7 +300,7 @@ def read_rss(rss_url, limit=3, to_json=False, verbose=False):
         print(json.dumps(feed, sort_keys=False, indent=4, ensure_ascii=False))
     else:
         logger.info(f"Printing formatted output")
-        print_result(normalize("NFKD", feed))
+        print_result(feed)
 
 sys.excepthook = exception_handler
 
@@ -311,7 +310,8 @@ links = []
 
 if __name__ == "__main__":
     # read_rss('https://news.yahoo.com/rss/', limit=3, verbose=False)
-    read_rss('http://www.newyorker.com/feed/news', limit=3, to_json=True)
+    # read_rss('http://www.newyorker.com/feed/news', limit=3, to_json=True)
+    read_rss('http://www.newyorker.com/feed/news', limit=3)
     # read_rss('http://ya.ru')
     # print(parse_article("https://news.yahoo.com/dark-brandon-strikes-again-joe-081130226.html"))
     # print(links)

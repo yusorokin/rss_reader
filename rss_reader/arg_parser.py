@@ -1,7 +1,7 @@
 import argparse
-from _version import __version__
+from rss_reader._version import __version__
 
-prog_name = "RSS reader"
+prog_name = "rss_reader"
 
 def parse_args(args):
     parser = argparse.ArgumentParser(
@@ -21,7 +21,7 @@ def parse_args(args):
         action='store',
         type=int,
         nargs='?',
-        default=1,
+        default=3,
         help='limit news topics if this parameter provided'
         )
     parser.add_argument(
