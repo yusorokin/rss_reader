@@ -11,8 +11,9 @@ def parse_args(args):
     parser.add_argument(
         'url',
         metavar='URL',
-        action="store",
         type=str,
+        nargs="?",
+        default=None,
         help='URL to RSS feed for reading'
         )
     parser.add_argument(
@@ -44,6 +45,19 @@ def parse_args(args):
         '--version',
         action='version',
         version=f'%(prog)s {__version__}',
-        help='print version info'
+        help='prints version info'
         )
-    return parser.parse_args(args)
+    parser.add_argument(
+        '--date',
+        dest='date',
+        action='store',
+        type=str,
+        nargs='?',
+        default=None,
+        help='get cached feed for the given date'
+        )
+    parsed_args = parser.parse_args(args)
+    if (parsed_args.date is None and parsed_args.url is None):
+        parser.error("Mandatory positional argument 'URL' is missing")
+
+    return parsed_args

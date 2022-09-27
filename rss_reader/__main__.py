@@ -4,7 +4,7 @@ import sys
 
 def cli():
     args = parse_args(sys.argv[1:])
-    one_shot.read_rss(args.url, args.limit, args.to_json, args.verbose)
+    one_shot.read_rss(args.url, args.limit, args.to_json, args.verbose, args.date)
 
 if __name__ == "__main__":
     cli()
